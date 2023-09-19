@@ -31,12 +31,15 @@
                 if (user)
                 {
                     Console.WriteLine("Login successful.");
+                    menuRunning = false;
                 }
                 else
                 {
                     Console.WriteLine("Login failed."); // Testing123
                 }
             }
+            Console.Write("Press any button to continue...");
+            Console.ReadKey();
         }
     }
 }
