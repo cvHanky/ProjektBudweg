@@ -38,7 +38,7 @@
                 }
             }
 
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
     }
 }
