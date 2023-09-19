@@ -34,7 +34,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Login failed.");
+                    Console.WriteLine("Login failed."); // REdigere i test branch
                 }
             }
 
