@@ -38,8 +38,6 @@
                 }
             }
 
-            Console.ReadKey();
-            Console.ReadKey();
         }
     }
 }
