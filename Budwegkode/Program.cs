@@ -9,7 +9,7 @@
             Console.WriteLine("Velkommen til menuen.");
 
             List<string> UserList = new List<string>();
-            UserList.Add("cvhanky");UserList.Add("simsimon");UserList.Add("morten"); UserList.Add("hankyboy");
+            UserList.Add("makker2");UserList.Add("andersbakdal");UserList.Add("roberozlav"); UserList.Add("makker");
 
             bool menuRunning = true;     // En bool der styrer om menuen kører.
             int countOuter = 0;
