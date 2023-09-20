@@ -6,6 +6,10 @@
         {
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
+
+            /*  SLET HER FOR AT KODE VIRKER
+            
+
             Console.WriteLine("Velkommen til menuen.");
 
             List<string> UserList = new List<string>();
@@ -39,6 +43,18 @@
                     Console.WriteLine("Login failed."); // Testing123
                 }
             }
+
+            SLET HER FOR AT KODE VIRKER */
+
+            Menu menu = new Menu();
+
+            menu.TilføjMedarbejder("Per Hansen", "Per");
+            menu.TilføjMedarbejder("Daniel Hoppe Hansen", "52135");
+            menu.TilføjMedarbejder("Roberozlav", "007");
+            menu.TilføjMedarbejder("Anders Bakdal", "PWQ9");
+
+            menu.SeMedarbejdere();
+
             Console.Write("\nPress any button to continue...");
             Console.ReadKey();
         }
