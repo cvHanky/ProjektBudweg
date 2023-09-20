@@ -8,7 +8,7 @@ namespace Budwegkode
 {
     public class Medarbejder
     {                          // Klasse til medarbejderen. Alting er public, da det skal kunne tilgås af andre klasser. 
-        public string Name = "";
-        public string UserID = "";
+        public string Name;
+        public string UserID;
     }
 }
