@@ -9,13 +9,13 @@ namespace Budwegkode
     public class Afdeling
     {
         // Klasse til Afdeling. 
-        public string Name;
-        public string Building;
+        public string Navn;
+        public string Bygning;
 
-        public Afdeling(string name, string building)
+        public Afdeling(string navn, string bygning)
         {
-            Name = name;
-            Building = building;
+            Navn = navn;
+            Bygning = bygning;
         }
 
 

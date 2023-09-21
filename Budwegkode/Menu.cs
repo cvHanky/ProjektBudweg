@@ -28,7 +28,7 @@ namespace Budwegkode
         {
             for (int i = 0; i < medarbejderAntal; i++)          // Denne metode printer navn og ID for alle medarbejdere. 
             {
-                Console.WriteLine(MedarbejderListe[i].Name + "   :   " + MedarbejderListe[i].UserID);
+                Console.WriteLine(MedarbejderListe[i].Navn + "   :   " + MedarbejderListe[i].UserID);
             }
         }
 
