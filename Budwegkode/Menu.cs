@@ -8,7 +8,7 @@ namespace Budwegkode
 {
     public class Menu      // Denne klasse styrer de metoder der skal bruges i vores system. 
     {
-        public Menu(string title)
+        public Menu(string title)     // Constructor til "Menu"-klassen. 
         {
             Title = title;
         }
