@@ -8,14 +8,18 @@ namespace Budwegkode
 {
     public class Menu      // Denne klasse styrer de metoder der skal bruges i vores system. 
     {
+        public Menu(string title)
+        {
+            Title = title;
+        }
+        public string Title;
         private int medarbejderAntal = 0;
         private Medarbejder[] MedarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
 
         public void TilføjMedarbejder(string inputNavn, string inputID)   // Metode der tilføjer en ny medarbejder. Der skal skrives 2 parametre, 
         {                                                           // ... som hhv. er medarbejderens navn og hans userID. 
-            Medarbejder mdab = new Medarbejder();     // Tilføjer en ny instans af en medarbejder.
-            mdab.Name = inputNavn;                     // Her bruges de indtastede parametre til at ændre "Name" og "UserID" attributterne af en medarbejder.
-            mdab.UserID = inputID;
+            Medarbejder mdab = new Medarbejder(inputNavn, inputID);     // Tilføjer en ny instans af en medarbejder.
+                                                                        // Her bruges de indtastede parametre til at ændre "Name" og "UserID" attributterne af en medarbejder.
             MedarbejderListe[medarbejderAntal] = mdab;    // Den instantierede medarbejder tilføjes nu til listen af medarbejdere. 
             medarbejderAntal++;           // Til sidst lægges der 1 til antallet af medarbejdere, da der nu er tilføjet en ny medarbejder. 
         }
