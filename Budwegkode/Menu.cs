@@ -10,17 +10,18 @@ namespace Budwegkode
     {
         public Menu(string title)     // Constructor til "Menu"-klassen. 
         {
-            this.title = title;
+            Title = title;
         }
-        private string title;
+        public string Title;
         private int medarbejderAntal = 0;
-        private Medarbejder[] MedarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
+        private Medarbejder[] medarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
+
 
         public void TilføjMedarbejder(string inputNavn, string inputID)   // Metode der tilføjer en ny medarbejder. Der skal skrives 2 parametre, 
         {                                                           // ... som hhv. er medarbejderens navn og hans userID. 
             Medarbejder mdab = new Medarbejder(inputNavn, inputID);     // Tilføjer en ny instans af en medarbejder.
                                                                         // Her bruges de indtastede parametre til at ændre "Name" og "UserID" attributterne af en medarbejder.
-            MedarbejderListe[medarbejderAntal] = mdab;    // Den instantierede medarbejder tilføjes nu til listen af medarbejdere. 
+            medarbejderListe[medarbejderAntal] = mdab;    // Den instantierede medarbejder tilføjes nu til listen af medarbejdere. 
             medarbejderAntal++;           // Til sidst lægges der 1 til antallet af medarbejdere, da der nu er tilføjet en ny medarbejder. 
         }
 
@@ -28,7 +29,7 @@ namespace Budwegkode
         {
             for (int i = 0; i < medarbejderAntal; i++)          // Denne metode printer navn og ID for alle medarbejdere. 
             {
-                Console.WriteLine(MedarbejderListe[i].Navn + "   :   " + MedarbejderListe[i].UserID);
+                Console.WriteLine(medarbejderListe[i].Navn + "   :   " + medarbejderListe[i].UserID);
             }
         }
 
@@ -38,7 +39,7 @@ namespace Budwegkode
             bool user = false;
             for (int i = 0; i < medarbejderAntal;i++)      // 
             {
-                if (MedarbejderListe[i].UserID == inputID)
+                if (medarbejderListe[i].UserID == inputID)
                 {
                     user = true; break;
                 }
