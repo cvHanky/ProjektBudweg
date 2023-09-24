@@ -10,9 +10,9 @@ namespace Budwegkode
     {
         public Menu(string title)     // Constructor til "Menu"-klassen. 
         {
-            Title = title;
+            this.title = title;
         }
-        public string Title;
+        private string title;
         private int medarbejderAntal = 0;
         private Medarbejder[] MedarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
 

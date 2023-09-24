@@ -9,13 +9,13 @@ namespace Budwegkode
     public class Besøgende
     {
         // Klasse til grupper der besøger virksomheden.
-        public int Antal;
-        public string Navn;
+        private int antal;
+        private string navn;
 
         public Besøgende(int antal, string navn)
         {
-            Antal = antal;
-            Navn = navn;
+            this.antal = antal;
+            this.navn = navn;
         }
     }
 }
