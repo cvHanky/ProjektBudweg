@@ -13,12 +13,12 @@
             loginMenu.TilføjMedarbejder("Roberozlav", "007");
             loginMenu.TilføjMedarbejder("Anders Bakdal", "PWQ9");
 
+            bool user = false;           // En bool der styrer om brugeren er en valid user.
             bool menuRunning = true;     // En bool der styrer om menuen kører.
             while (menuRunning)
             {
                 Console.WriteLine("\nIndtast medarbejder ID...");
                 string inputID = Console.ReadLine();
-                bool user = false;                          // En bool der styrer om brugeren er en valid user.
                 user = loginMenu.TjekMedarbejder(inputID);  // Denne metode kigger listen af "UserID" igennem og returnerer "true" hvis den finder et ID. 
                 if (user)
                 {
@@ -32,6 +32,7 @@
                     Console.WriteLine("Login failed.");
                 }
             }
+            
 
             Console.Write("\nPress any button to continue...");
             Console.ReadKey();

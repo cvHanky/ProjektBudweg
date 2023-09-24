@@ -15,7 +15,7 @@ namespace Budwegkode
         public string Title;
         private int medarbejderAntal = 0;
         private Medarbejder[] medarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
-
+        private Afdeling[] afdelingsliste = new Afdeling[30];
 
         public void TilføjMedarbejder(string inputNavn, string inputID)   // Metode der tilføjer en ny medarbejder. Der skal skrives 2 parametre, 
         {                                                           // ... som hhv. er medarbejderens navn og hans userID. 
@@ -45,6 +45,10 @@ namespace Budwegkode
                 }
             }
             return user;
+        }
+        public void VælgAfdeling()
+        {
+
         }
     }
 }
