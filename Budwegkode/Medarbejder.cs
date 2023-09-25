@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace Budwegkode
 {
     public class Medarbejder
-    {                          // Klasse til medarbejderen. Alting er public, da det skal kunne tilgås af andre klasser. 
+    {              // Klasse til medarbejderen. Alting er public, da det skal kunne tilgås af andre klasser. 
         public string Navn;
         public string UserID;
         private string rolle;
+        Menu menu = new Menu("Lets go");
 
         public Medarbejder(string navn, string userID)
         {
@@ -18,10 +19,13 @@ namespace Budwegkode
             UserID = userID;
             rolle = "medarbejder";
         }
-
-        public void ÆndrRolle()
+        public string GetRolle()
         {
-
+            return rolle;
+        }
+        public void GørTilLeder()
+        {
+            rolle = "leder";
         }
     }
 }

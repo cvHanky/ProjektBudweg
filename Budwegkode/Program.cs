@@ -13,17 +13,22 @@
             loginMenu.TilføjMedarbejder("Roberozlav", "007");
             loginMenu.TilføjMedarbejder("Anders Bakdal", "PWQ9");
 
-            bool user = false;           // En bool der styrer om brugeren er en valid user.
+            bool validUser = false;           // En bool der styrer om brugeren er en valid user.
             bool menuRunning = true;     // En bool der styrer om menuen kører.
+            string BrugerRolle = "";
+            string BrugerNavn = "";
             while (menuRunning)
             {
                 Console.WriteLine("\nIndtast medarbejder ID...");
                 string inputID = Console.ReadLine();
-                user = loginMenu.TjekMedarbejder(inputID);  // Denne metode kigger listen af "UserID" igennem og returnerer "true" hvis den finder et ID. 
-                if (user)
+                validUser = loginMenu.TjekMedarbejder(inputID);  // Denne metode kigger listen af "UserID" igennem og returnerer "true" hvis den finder et ID. 
+                if (validUser)
                 {
+                    BrugerNavn = loginMenu.GetMedarbejderNavn(inputID);
+                    BrugerRolle = loginMenu.GetMedarbejderRolle(inputID);
+                    
                     Console.Clear();
-                    Console.WriteLine("Login successful.");
+                    Console.WriteLine("Login successful.\nVelkommen {0}",BrugerNavn);
                     menuRunning = false;     // Når "menuRunning" er false genstarter den ikke menuen. 
                 }
                 else

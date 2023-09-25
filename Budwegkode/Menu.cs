@@ -33,18 +33,55 @@ namespace Budwegkode
             }
         }
 
-        public bool TjekMedarbejder(string inputID)        // Denne metode tager et "UserID" som input, og tjekker om det findes i listen af ID'er. 
+        public bool TjekMedarbejder(string UserID)        // Denne metode tager et "UserID" som input, og tjekker om det findes i listen af ID'er. 
         {
-            inputID = inputID.ToUpper();                   // Omdanner lower-case bogstaver til upper-case. 
+            UserID = UserID.ToUpper();                   // Omdanner lower-case bogstaver til upper-case. 
             bool user = false;
-            for (int i = 0; i < medarbejderAntal;i++)      // 
+            for (int i = 0; i < medarbejderAntal; i++)
             {
-                if (medarbejderListe[i].UserID == inputID)
+                if (medarbejderListe[i].UserID == UserID)
                 {
                     user = true; break;
                 }
             }
             return user;
+        }
+        public string GetMedarbejderNavn(string UserID)
+        {
+            UserID = UserID.ToUpper();
+            string navn = "";
+            for (int i = 0; i < medarbejderAntal; i++)
+            {
+                if (medarbejderListe[i].UserID == UserID)
+                {
+                    navn = medarbejderListe[i].Navn; break;
+                }
+            }
+            return navn;
+        }
+        public string GetMedarbejderRolle(string UserID)
+        {
+            UserID = UserID.ToUpper();
+            string navn = "";
+            for (int i = 0; i < medarbejderAntal; i++)
+            {
+                if (medarbejderListe[i].UserID == UserID)
+                {
+                    navn = medarbejderListe[i].GetRolle(); break;
+                }
+            }
+            return navn;
+        }
+        public void GørTilLeder(string UserID)
+        {
+            for (int i = 0; i < medarbejderAntal; i++)
+            {
+                if (medarbejderListe[i].UserID == UserID)
+                {
+                    medarbejderListe[i].GørTilLeder();
+                    break;
+                }
+            }
         }
         public void VælgAfdeling()
         {
