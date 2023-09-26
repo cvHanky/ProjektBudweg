@@ -32,57 +32,7 @@
                     Console.Clear();
                     Console.WriteLine("Login var succesfuld.\nVelkommen {0}\n",BrugerNavn);
 
-                    if (BrugerRolle == "medarbejder")
-                    {
-                        Console.WriteLine("1. Tjek ind\n2. Tjek ud\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
-                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);                // Login menu for en standard medarbejder opstilles nu. 
-                        switch (keyInfo.Key)
-                        {
-                            case ConsoleKey.D0:
-                                menuRunning = true;
-                                Console.Clear();
-                                break;
-                            case ConsoleKey.D1:
-                                Console.WriteLine();
-                                break;
-                            case ConsoleKey.D2:
-                                Console.WriteLine();
-                                break;
-                            default:
-                                Console.WriteLine();
-                                break;
-                        }
-                    }
-                    else if (BrugerRolle == "leder")
-                    {
-                        Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Tilføj gruppe\n 4. Fjern Gruppe\n5. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
-                                                                                            //Login menu for en leder 
-                        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                        switch (keyInfo.Key) 
-                        {
-                            case ConsoleKey.D0:
-                                menuRunning = true;
-                                Console.Clear();
-                                break;
-                            case ConsoleKey.D1:
-                                Console.WriteLine();
-                                break;
-                            case ConsoleKey.D2:
-                                Console.WriteLine();
-                                break;
-                            case ConsoleKey.D3:
-                                Console.WriteLine();
-                                break;
-                            case ConsoleKey.D4:
-                                Console.WriteLine();
-                                break;
-                            case ConsoleKey.D5:
-                                Console.WriteLine();
-                                break;
-                            default : 
-                                Console.WriteLine();
-                                break;
-                        }
+
                     while (menuRunning)
                     {
                         if (BrugerRolle == "medarbejder")
@@ -96,10 +46,40 @@
                                     Console.Clear();
                                     break;
                                 case ConsoleKey.D1:
-                                    Console.Clear();
                                     Console.WriteLine();
                                     break;
                                 case ConsoleKey.D2:
+                                    Console.WriteLine();
+                                    break;
+                                default:
+                                    Console.WriteLine();
+                                    break;
+                            }
+                        }
+                        else if (BrugerRolle == "leder")
+                        {
+                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Tilføj gruppe\n 4. Fjern Gruppe\n5. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
+                            //Login menu for en leder 
+                            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                            switch (keyInfo.Key)
+                            {
+                                case ConsoleKey.D0:
+                                    menuRunning = true;
+                                    Console.Clear();
+                                    break;
+                                case ConsoleKey.D1:
+                                    Console.WriteLine();
+                                    break;
+                                case ConsoleKey.D2:
+                                    Console.WriteLine();
+                                    break;
+                                case ConsoleKey.D3:
+                                    Console.WriteLine();
+                                    break;
+                                case ConsoleKey.D4:
+                                    Console.WriteLine();
+                                    break;
+                                case ConsoleKey.D5:
                                     Console.WriteLine();
                                     break;
                                 default:
