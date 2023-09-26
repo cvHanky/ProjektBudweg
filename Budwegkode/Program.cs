@@ -45,6 +45,7 @@
                                     Console.Clear();
                                     break;
                                 case ConsoleKey.D1:
+                                    Console.Clear();
                                     Console.WriteLine();
                                     break;
                                 case ConsoleKey.D2:
