@@ -13,6 +13,7 @@
             loginMenu.TilføjMedarbejder("Daniel Hoppe Hansen", "52135");
             loginMenu.TilføjMedarbejder("Roberozlav", "007");
             loginMenu.TilføjMedarbejder("Anders Bakdal", "PWQ9");
+            loginMenu.TilføjMedarbejder("Mads Carlsen", "1337");
 
             bool validUser = false;           // En bool der styrer om brugeren er en valid user.
             bool menuRunning = true;          // En bool der styrer om menuen kører.
