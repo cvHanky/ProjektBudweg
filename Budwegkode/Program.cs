@@ -31,7 +31,6 @@
                     
                     Console.Clear();
                     Console.WriteLine("Login var succesfuld.\nVelkommen {0}\n",BrugerNavn);
-                    menuRunning = false;     // Når "menuRunning" er false genstarter den ikke menuen. 
 
                     if (BrugerRolle == "medarbejder")
                     {
@@ -83,6 +82,29 @@
                             default : 
                                 Console.WriteLine();
                                 break;
+                        }
+                    while (menuRunning)
+                    {
+                        if (BrugerRolle == "medarbejder")
+                        {
+                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
+                            ConsoleKeyInfo keyInfo = Console.ReadKey(true);                // Login menu for en standard medarbejder opstilles nu. 
+                            switch (keyInfo.Key)
+                            {
+                                case ConsoleKey.D0:
+                                    menuRunning = true;
+                                    Console.Clear();
+                                    break;
+                                case ConsoleKey.D1:
+                                    Console.WriteLine();
+                                    break;
+                                case ConsoleKey.D2:
+                                    Console.WriteLine();
+                                    break;
+                                default:
+                                    Console.WriteLine();
+                                    break;
+                            }
                         }
                     }
                 }
