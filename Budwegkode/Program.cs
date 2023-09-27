@@ -6,7 +6,7 @@
         {
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
-            Menu loginMenu = new Menu("Velkommen til menuen.");
+            Menu loginMenu = new Menu("Velkommen.");
 
             loginMenu.TilføjMedarbejder("Per Hansen", "9Q13");
             loginMenu.GørTilLeder("9Q13");
@@ -58,7 +58,7 @@
                         }
                         else if (BrugerRolle == "leder")
                         {
-                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Tilføj gruppe\n 4. Fjern Gruppe\n5. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
+                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Tilføj gruppe\n4. Fjern Gruppe\n5. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
                             //Login menu for en leder 
                             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                             switch (keyInfo.Key)
