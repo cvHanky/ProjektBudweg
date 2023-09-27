@@ -32,8 +32,8 @@
                     Console.Clear();
                     Console.WriteLine("Login var succesfuld.\nVelkommen {0}\n",BrugerNavn);
 
-
-                    while (menuRunning)
+                    bool innerMenuRunning = true;
+                    while (innerMenuRunning)
                     {
                         if (BrugerRolle == "medarbejder")
                         {
@@ -42,17 +42,17 @@
                             switch (keyInfo.Key)
                             {
                                 case ConsoleKey.D0:
-                                    menuRunning = true;
+                                    innerMenuRunning = false;
                                     Console.Clear();
                                     break;
                                 case ConsoleKey.D1:
-                                    
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D2:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 default:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                             }
                         }
@@ -64,26 +64,26 @@
                             switch (keyInfo.Key)
                             {
                                 case ConsoleKey.D0:
-                                    menuRunning = true;
+                                    innerMenuRunning = false;
                                     Console.Clear();
                                     break;
                                 case ConsoleKey.D1:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D2:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D3:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D4:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D5:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                                 default:
-                                    Console.WriteLine();
+                                    Console.Clear();
                                     break;
                             }
                         }
