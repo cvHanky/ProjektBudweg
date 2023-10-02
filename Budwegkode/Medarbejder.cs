@@ -27,18 +27,28 @@ namespace Budwegkode
         public string Rolle
         {
             get { return rolle; } 
-            set { rolle = value}
+            set { rolle = value;  }
         }
 
-        public Medarbejder(string navn, string userID)
-        {
+        public Medarbejder(string navn, string userID)           // Overloading constructors, så man både kan vælge at tilføje 
+        {                                                        // en almen medarbejder eller en leder/admin. 
             Navn = navn;
             UserID = userID;
             rolle = "medarbejder";
         }
-        public void GørTilLeder()
+        public Medarbejder(string navn, string userID, string rolle)
         {
-            rolle = "leder";
+            Navn = navn;
+            UserID = userID;
+            if (rolle == "leder" || rolle == "admin" || rolle == "medarbejder")
+                Rolle = rolle;
+            else
+                throw new Exception("Fejl, ugyldig rolle.");
+        }
+        public string MedarbejderTitel()
+        {
+            string Titel = Navn + ";" + UserID + ";" + Rolle;
+            return Titel;
         }
     }
 }
