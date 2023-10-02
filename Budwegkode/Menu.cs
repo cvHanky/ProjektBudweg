@@ -18,6 +18,11 @@ namespace Budwegkode
         private Afdeling[] afdelingsliste = new Afdeling[30];
         private string[] fremmødteListe = new string[200];
 
+        public int MedarbejderAntal                                       // Public property. Har ikke "set" da man ikke skal kunne ændre denne værdi. 
+        {
+            get { return medarbejderAntal; }
+        }
+
         public void TilføjMedarbejder(string inputNavn, string inputID)   // Metode der tilføjer en ny medarbejder. Der skal skrives 2 parametre, 
         {                                                           // ... som hhv. er medarbejderens navn og hans userID. 
             Medarbejder mdab = new Medarbejder(inputNavn, inputID);     // Tilføjer en ny instans af en medarbejder.
@@ -68,7 +73,7 @@ namespace Budwegkode
             {
                 if (medarbejderListe[i].UserID == UserID)
                 {
-                    navn = medarbejderListe[i].GetRolle(); break;
+                    navn = medarbejderListe[i].Rolle; break;
                 }
             }
             return navn;

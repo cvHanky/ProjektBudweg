@@ -9,9 +9,19 @@ namespace Budwegkode
     public class Afdeling
     {
         // Klasse til Afdeling. 
-        public string Navn;
-        public string Bygning;
+        private string navn;                  // Private attributter
+        private string bygning;
 
+        public string Navn                    // Public properties
+        {
+            get { return navn; }
+            set { navn = value; }
+        }
+        public string Bygning
+        {
+            get { return bygning; }
+            set { bygning = value; }
+        }
         public Afdeling(string navn, string bygning)
         {
             Navn = navn;
