@@ -51,7 +51,26 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
-                                    Console.WriteLine("Hvilken bygning arbejder du i idag?");
+                                    Console.WriteLine("Hvilken bygning arbejder du i idag?\n1. Bygning A\n2. Bygning B\n3. Bygning C\n(Tryk 0 for at gå tilbage)");
+                                    ConsoleKeyInfo bygning = Console.ReadKey(true);
+                                    switch (bygning.Key)
+                                    {
+                                        case ConsoleKey.D0:
+                                            Console.Clear();
+                                            break;
+                                    case ConsoleKey.D1:
+                                            Console.Clear();
+                                            break;
+                                    case ConsoleKey.D2:
+                                            Console.Clear();
+                                            break;
+                                    case ConsoleKey.D3:
+                                            Console.Clear();
+                                            break;
+                                    default:
+                                            Console.Clear();
+                                            break;
+                                    }
                                     Console.ReadKey();
                                     Console.Clear();
                                     break;
@@ -79,6 +98,26 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
+                                    Console.WriteLine("Hvilken afdeling arbejder du i idag?\n1. Bygning A\n2. Bygning B\n3. Bygning C\n\n(Tryk på 0 for at gå tilbage)");
+                                    ConsoleKeyInfo bygning = Console.ReadKey(true);
+                                    switch (bygning.Key)
+                                    {
+                                        case ConsoleKey .D0:
+                                            Console.Clear();
+                                            break;
+                                        case ConsoleKey .D1:
+                                            Console.Clear();
+                                            break;
+                                        case ConsoleKey .D2:
+                                            Console.Clear();
+                                            break;
+                                        case ConsoleKey .D3:
+                                            Console.Clear();
+                                            break;
+                                        default: 
+                                            Console.Clear();
+                                            break;
+                                    }
                                     break;
                                 case ConsoleKey.D2:
                                     Console.Clear();
@@ -88,8 +127,18 @@
                                     break;
                                 case ConsoleKey.D4:
                                     Console.Clear();
+                                    Console.WriteLine("Hvor kommer gruppen fra?");
+                                    Console.ReadLine();
+                                    Console.WriteLine("Hvor mange er de i gruppen?");
+                                    Console.ReadLine();
                                     break;
                                 case ConsoleKey.D5:
+                                    Console.Clear();
+                                    break;
+                                case ConsoleKey.D6:
+                                    Console.Clear();
+                                    break;
+                                case ConsoleKey.D7:
                                     Console.Clear();
                                     break;
                                 default:
