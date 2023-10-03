@@ -51,29 +51,33 @@ namespace Budwegkode
         }
         public string GetMedarbejderNavn(string UserID)
         {
+            string[] Lines = sr.ReadToEnd().Split("\n");
             UserID = UserID.ToUpper();
             string navn = "";
-            for (int i = 0; i < medarbejderAntal; i++)
+            for (int i = 0; i < Lines.Length; i++)
             {
-                if (medarbejderListe[i].UserID == UserID)
+                string[] Data = Lines[i].Split(";");
+                if (Data[1] == UserID)
                 {
-                    navn = medarbejderListe[i].Navn; break;
+                    navn = Data[0]; break;
                 }
             }
             return navn;
         }
         public string GetMedarbejderRolle(string UserID)
         {
+            string[] Lines = sr.ReadToEnd().Split("\n");
             UserID = UserID.ToUpper();
-            string navn = "";
-            for (int i = 0; i < medarbejderAntal; i++)
+            string rolle = "";
+            for (int i = 0; i < Lines.Length; i++)
             {
-                if (medarbejderListe[i].UserID == UserID)
+                string[] Data = Lines[i].Split(";");
+                if (Data[1] == UserID)
                 {
-                    navn = medarbejderListe[i].Rolle; break;
+                    rolle = Data[2]; break;
                 }
             }
-            return navn;
+            return rolle;
         }
     }
 }
