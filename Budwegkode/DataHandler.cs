@@ -45,5 +45,17 @@ namespace Budwegkode
             sr.Close();
             return medarbejderListe;
         }
+        public void SaveAfdelinger(Afdeling[] afdelinger)
+        {
+            StreamWriter sw = new StreamWriter(DataFileName);
+            for (int i = 0; i < afdelinger.Length;i++)
+            {
+                if (i != afdelinger.Length - 1)
+                    sw.WriteLine(afdelinger[i].AfdelingTitel());
+                else
+                    sw.Write(afdelinger[i].AfdelingsTitel());
+            }
+            sw.Close();
+        }
     }
 }
