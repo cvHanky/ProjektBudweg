@@ -37,7 +37,7 @@
                     {
                         if (BrugerRolle == "medarbejder")
                         {
-                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
+                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
                             ConsoleKeyInfo keyInfo = Console.ReadKey(true);                // Login menu for en standard medarbejder opstilles nu. 
                             switch (keyInfo.Key)
                             {
@@ -47,8 +47,14 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
+                                    Console.WriteLine("Hvilken bygning arbejder du i idag?");
+                                    Console.ReadKey();
+                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D2:
+                                    Console.Clear();
+                                    break;
+                                case ConsoleKey.D3:
                                     Console.Clear();
                                     break;
                                 default:
@@ -58,7 +64,7 @@
                         }
                         else if (BrugerRolle == "leder")
                         {
-                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Tilføj gruppe\n 4. Fjern Gruppe\n5. Se medarbejdere\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
+                            Console.WriteLine("1. Tjek ind\n2. Tjek ud\n3. Se medarbejdere\n4. Tilføj Gruppe\n5. Fjern gruppe\n6. Tilføj medarbejder\n 7. Fjern medarbejder\n\n(Tast et menupunkt eller tryk 0 for at logge ud)");
                             //Login menu for en leder 
                             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                             switch (keyInfo.Key)
