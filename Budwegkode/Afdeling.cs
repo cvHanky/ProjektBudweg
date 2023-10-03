@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,11 @@ namespace Budwegkode
             Navn = navn;
             Bygning = bygning;
         }
-
+        public string AfdelingTitel()
+        {
+            string Titel = Navn + ";" + Bygning + ";";
+            return Titel;
+        }
 
     }
 }
