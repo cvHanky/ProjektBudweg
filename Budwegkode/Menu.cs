@@ -13,11 +13,17 @@ namespace Budwegkode
             Title = title;
         }
         public string Title;
-        private Afdeling[] afdelingsliste = new Afdeling[30];
+        /*
+        private Medarbejder[] medarbejderListe = new Medarbejder[200];
+        private Afdeling[] afdelingsListe = new Afdeling[30];
         private string[] fremmødteListe = new string[200];
+        */
+
 
         DataHandler handler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
+        StreamReader sr = new StreamReader(@"..\..\..\Medarbejderliste.txt");
 
+        /*
         public void SeMedarbejdere()
         {
             for (int i = 0; i < medarbejderAntal; i++)          // Denne metode printer navn og ID for alle medarbejdere. 
@@ -25,14 +31,18 @@ namespace Budwegkode
                 Console.WriteLine(medarbejderListe[i].Navn + "   :   " + medarbejderListe[i].UserID);
             }
         }
+        */
 
         public bool TjekMedarbejder(string UserID)        // Denne metode tager et "UserID" som input, og tjekker om det findes i listen af ID'er. 
         {
+            string[] Lines = sr.ReadToEnd().Split("\n");
+
             UserID = UserID.ToUpper();                   // Omdanner lower-case bogstaver til upper-case. 
             bool user = false;
-            for (int i = 0; i < medarbejderAntal; i++)
+            for (int i = 0; i < Lines.Length; i++)
             {
-                if (medarbejderListe[i].UserID == UserID)
+                string[] Data = Lines[i].Split(";");
+                if (Data[1] == UserID)
                 {
                     user = true; break;
                 }
@@ -41,29 +51,33 @@ namespace Budwegkode
         }
         public string GetMedarbejderNavn(string UserID)
         {
+            string[] Lines = sr.ReadToEnd().Split("\n");
             UserID = UserID.ToUpper();
             string navn = "";
-            for (int i = 0; i < medarbejderAntal; i++)
+            for (int i = 0; i < Lines.Length; i++)
             {
-                if (medarbejderListe[i].UserID == UserID)
+                string[] Data = Lines[i].Split(";");
+                if (Data[1] == UserID)
                 {
-                    navn = medarbejderListe[i].Navn; break;
+                    navn = Data[0]; break;
                 }
             }
             return navn;
         }
         public string GetMedarbejderRolle(string UserID)
         {
+            string[] Lines = sr.ReadToEnd().Split("\n");
             UserID = UserID.ToUpper();
-            string navn = "";
-            for (int i = 0; i < medarbejderAntal; i++)
+            string rolle = "";
+            for (int i = 0; i < Lines.Length; i++)
             {
-                if (medarbejderListe[i].UserID == UserID)
+                string[] Data = Lines[i].Split(";");
+                if (Data[1] == UserID)
                 {
-                    navn = medarbejderListe[i].Rolle; break;
+                    rolle = Data[2]; break;
                 }
             }
-            return navn;
+            return rolle;
         }
     }
 }
