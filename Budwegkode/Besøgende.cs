@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,19 +16,38 @@ namespace Budwegkode
         public int Antal                  // Public properties
         {
             get { return antal; }
-            set { antal = value; }
+            set 
+            { 
+                if (value > 0) 
+                {
+                    antal = value;
+                } 
+                else
+                {
+                    throw new Exception("Fejl, antal skal være over 0 :(");
+                }
+            }
         }
         public string Navn
         {
             get { return navn; }
-            set { navn = value; }
+            set 
+            { 
+                if (value.Length > 0)
+                {
+                    navn = value;
+                }
+                else 
+                { 
+                    throw new Exception("Gruppen skal have et navn");
+                }
+            
+            }
         }
         public Besøgende(int antal, string navn)
         {
             Antal = antal;
             Navn = navn;
         }
-
-
     }
 }

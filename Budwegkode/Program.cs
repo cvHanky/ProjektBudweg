@@ -58,21 +58,19 @@
                                         case ConsoleKey.D0:
                                             Console.Clear();
                                             break;
-                                    case ConsoleKey.D1:
+                                        case ConsoleKey.D1:
                                             Console.Clear();
                                             break;
-                                    case ConsoleKey.D2:
+                                        case ConsoleKey.D2:
                                             Console.Clear();
                                             break;
-                                    case ConsoleKey.D3:
+                                        case ConsoleKey.D3:
                                             Console.Clear();
                                             break;
-                                    default:
+                                        default:
                                             Console.Clear();
                                             break;
                                     }
-                                    Console.ReadKey();
-                                    Console.Clear();
                                     break;
                                 case ConsoleKey.D2:
                                     Console.Clear();
