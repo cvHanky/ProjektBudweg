@@ -40,14 +40,11 @@ namespace Budwegkode
         {
             Navn = navn;
             UserID = userID;
-            if (rolle == "leder" || rolle == "admin" || rolle == "medarbejder")
-                Rolle = rolle;
-            else
-                throw new Exception("Fejl, ugyldig rolle.");
+            Rolle = rolle;
         }
         public string MedarbejderTitel()
         {
-            string Titel = Navn + ";" + UserID + ";" + Rolle;
+            string Titel = Navn + ";" + UserID + ";" + Rolle + ";";
             return Titel;
         }
     }

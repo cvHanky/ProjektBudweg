@@ -1,5 +1,5 @@
-Per Hansen;9Q13;leder
-Daniel Hoppe Hansen;52135;medarbejder
-Roberozlav;007;medarbejder
-Anders Bakdal;PWQ9;medarbejder
-Mads Carlsen;1337;medarbejder
+Per Hansen;9Q13;leder;
+Daniel Hoppe Hansen;52135;medarbejder;
+Roberozlav;007;medarbejder;
+Mads Carlsen;1337;medarbejder;
+Anders Bakdal;PWQ9;medarbejder;

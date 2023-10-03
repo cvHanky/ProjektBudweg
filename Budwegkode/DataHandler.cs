@@ -34,16 +34,16 @@ namespace Budwegkode
         {
             StreamReader sr = new StreamReader(DataFileName);
             string[] fileLines = sr.ReadToEnd().Split('\n');
-            Medarbejder[] medarbejdere = new Medarbejder[fileLines.Length];
+            Medarbejder[] medarbejderListe = new Medarbejder[fileLines.Length];
 
             for (int i = 0; i < fileLines.Length; i++)
             {
                 string[] lineData = fileLines[i].Split(";");
                 Medarbejder medarbejder = new Medarbejder(lineData[0], lineData[1], lineData[2]);
-                medarbejdere[i] = medarbejder;
+                medarbejderListe[i] = medarbejder;
             }
             sr.Close();
-            return medarbejdere;
+            return medarbejderListe;
         }
     }
 }
