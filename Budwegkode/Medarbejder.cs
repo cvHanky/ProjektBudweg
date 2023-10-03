@@ -8,24 +8,47 @@ namespace Budwegkode
 {
     public class Medarbejder
     {              // Klasse til medarbejderen. Alting er public, da det skal kunne tilgås af andre klasser. 
-        public string Navn;
-        public string UserID;
-        private string rolle;
         Menu menu = new Menu("Lets go");
 
-        public Medarbejder(string navn, string userID)
+        private string navn;                 // Private attributter
+        private string userID;
+        private string rolle;
+        
+        public string Navn                   // Public properties
         {
+            get { return navn; } 
+            set { navn = value; }
+        }
+        public string UserID
+        {
+            get { return userID; } 
+            set { userID = value; }
+        }
+        public string Rolle
+        {
+            get { return rolle; } 
+            set { rolle = value;  }
+        }
+
+        public Medarbejder(string navn, string userID)           // Overloading constructors, så man både kan vælge at tilføje 
+        {                                                        // en almen medarbejder eller en leder/admin. 
             Navn = navn;
             UserID = userID;
             rolle = "medarbejder";
         }
-        public string GetRolle()
+        public Medarbejder(string navn, string userID, string rolle)
         {
-            return rolle;
+            Navn = navn;
+            UserID = userID;
+            if (rolle == "leder" || rolle == "admin" || rolle == "medarbejder")
+                Rolle = rolle;
+            else
+                throw new Exception("Fejl, ugyldig rolle.");
         }
-        public void GørTilLeder()
+        public string MedarbejderTitel()
         {
-            rolle = "leder";
+            string Titel = Navn + ";" + UserID + ";" + Rolle;
+            return Titel;
         }
     }
 }

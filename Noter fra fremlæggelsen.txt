@@ -1,0 +1,10 @@
+Der skal være en tredje rolle "admin" - skal kunne udføre CRUD. 
+Der er en "sikkerhedsrepræsentant" for hver afdeling. 
+Enhver medarbejder skal kunne finde enhver anden medarbejder. 
+Gruppe/gæster.
+Kantine-checkin funktionalitet.
+
+Noter fra Roar til evakuering:
+For en større virksomhed - man skal have udpeget sikkerhedsrepræsentanter for hver afdeling der kender evakueringsprocedurer. Disse personer er ansvarlige for at printe en fysisk liste og tage med ud. 
+
+Det er forsvarligt at måske gå imod GDPR, da programmet oftest skal bruges i nødsituationer. 

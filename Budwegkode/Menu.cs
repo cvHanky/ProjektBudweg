@@ -13,18 +13,10 @@ namespace Budwegkode
             Title = title;
         }
         public string Title;
-        private int medarbejderAntal = 0;
-        private Medarbejder[] medarbejderListe = new Medarbejder[200];    // Alle disse sættes til private, da de ikke skal kunne ændres direkte, kun ved brug af metoder. 
         private Afdeling[] afdelingsliste = new Afdeling[30];
         private string[] fremmødteListe = new string[200];
 
-        public void TilføjMedarbejder(string inputNavn, string inputID)   // Metode der tilføjer en ny medarbejder. Der skal skrives 2 parametre, 
-        {                                                           // ... som hhv. er medarbejderens navn og hans userID. 
-            Medarbejder mdab = new Medarbejder(inputNavn, inputID);     // Tilføjer en ny instans af en medarbejder.
-                                                                        // Her bruges de indtastede parametre til at ændre "Name" og "UserID" attributterne af en medarbejder.
-            medarbejderListe[medarbejderAntal] = mdab;    // Den instantierede medarbejder tilføjes nu til listen af medarbejdere. 
-            medarbejderAntal++;           // Til sidst lægges der 1 til antallet af medarbejdere, da der nu er tilføjet en ny medarbejder. 
-        }
+        DataHandler handler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
 
         public void SeMedarbejdere()
         {
@@ -68,21 +60,10 @@ namespace Budwegkode
             {
                 if (medarbejderListe[i].UserID == UserID)
                 {
-                    navn = medarbejderListe[i].GetRolle(); break;
+                    navn = medarbejderListe[i].Rolle; break;
                 }
             }
             return navn;
-        }
-        public void GørTilLeder(string UserID)
-        {
-            for (int i = 0; i < medarbejderAntal; i++)
-            {
-                if (medarbejderListe[i].UserID == UserID)
-                {
-                    medarbejderListe[i].GørTilLeder();
-                    break;
-                }
-            }
         }
     }
 }
