@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            DataHandler handler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
+            DataHandler medarbejderHandler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
+            DataHandler afdelingHandler = new DataHandler(@"..\..\..\Afdelingsliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
             Medarbejder[] medarbejdere = new Medarbejder[]
@@ -16,7 +17,17 @@
                 new Medarbejder("Anders Bakdal", "PWQ9"),
             };
 
-            handler.SaveMedarbejdere(medarbejdere);
+            Afdeling[] afdelinger = new Afdeling[]
+            {
+                new Afdeling("Lager","Bygning 1"),
+                new Afdeling("Vaskeri","Bygning 1"),
+                new Afdeling("Varemodtagelse","Bygning 2"),
+                new Afdeling("Lager", "Bygning 2"),
+                new Afdeling("Pakkeri","Bygning 2"),
+            };
+
+            medarbejderHandler.SaveMedarbejdere(medarbejdere);
+            afdelingHandler.SaveAfdelinger(afdelinger);
             
             Menu loginMenu = new Menu("Velkommen.");
 

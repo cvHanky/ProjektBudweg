@@ -53,9 +53,24 @@ namespace Budwegkode
                 if (i != afdelinger.Length - 1)
                     sw.WriteLine(afdelinger[i].AfdelingTitel());
                 else
-                    sw.Write(afdelinger[i].AfdelingsTitel());
+                    sw.Write(afdelinger[i].AfdelingTitel());
             }
             sw.Close();
+        }
+        public Afdeling[] LoadAfdelinger()
+        {
+            StreamReader sr = new StreamReader(DataFileName);
+            string[] Lines = sr.ReadToEnd().Split("\n");
+            Afdeling[] afdelingsListe = new Afdeling[Lines.Length];
+
+            for (int i = 0;i < afdelingsListe.Length;i++)
+            {
+                string[] lineData = Lines[i].Split(";");
+                Afdeling a = new Afdeling(lineData[0], lineData[1]);
+                afdelingsListe[i] = a;
+            }
+            sr.Close();
+            return afdelingsListe;
         }
     }
 }

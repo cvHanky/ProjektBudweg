@@ -1,0 +1,5 @@
+Lager;Bygning 1;
+Vaskeri;Bygning 1;
+Varemodtagelse;Bygning 2;
+Lager;Bygning 2;
+Pakkeri;Bygning 2;
