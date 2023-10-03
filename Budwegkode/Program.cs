@@ -4,16 +4,20 @@
     {
         static void Main(string[] args)
         {
+            DataHandler handler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
-            Menu loginMenu = new Menu("Velkommen til menuen.");
+            Menu loginMenu = new Menu("Velkommen.");
 
-            loginMenu.TilføjMedarbejder("Per Hansen", "9Q13");
-            loginMenu.GørTilLeder("9Q13");
-            loginMenu.TilføjMedarbejder("Daniel Hoppe Hansen", "52135");
-            loginMenu.TilføjMedarbejder("Roberozlav", "007");
-            loginMenu.TilføjMedarbejder("Anders Bakdal", "PWQ9");
-            loginMenu.TilføjMedarbejder("Mads Carlsen", "1337");
+            Medarbejder[] medArbejderliste = new Medarbejder[]
+            {
+                new Medarbejder("Per Hansen", "9Q13", "leder"),
+                new Medarbejder("Daniel Hoppe Hansen", "52135"),
+                new Medarbejder("Roberozlav", "007"),
+                new Medarbejder("Anders Bakdal", "PWQ9"),
+                new Medarbejder("Mads Carlsen", "1337"),
+            };
+            handler.SaveMedarbejdere(medArbejderliste);
 
             bool validUser = false;           // En bool der styrer om brugeren er en valid user.
             bool menuRunning = true;          // En bool der styrer om menuen kører.
