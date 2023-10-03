@@ -21,7 +21,6 @@ namespace Budwegkode
 
 
         DataHandler handler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
-        StreamReader sr = new StreamReader(@"..\..\..\Medarbejderliste.txt");
 
         /*
         public void SeMedarbejdere()
@@ -35,14 +34,13 @@ namespace Budwegkode
 
         public bool TjekMedarbejder(string UserID)        // Denne metode tager et "UserID" som input, og tjekker om det findes i listen af ID'er. 
         {
-            string[] Lines = sr.ReadToEnd().Split("\n");
+            Medarbejder[] medarbejdere = handler.LoadMedarbejdere();
 
             UserID = UserID.ToUpper();                   // Omdanner lower-case bogstaver til upper-case. 
             bool user = false;
-            for (int i = 0; i < Lines.Length; i++)
+            for (int i = 0; i < medarbejdere.Length; i++)
             {
-                string[] Data = Lines[i].Split(";");
-                if (Data[1] == UserID)
+                if (medarbejdere[i].UserID == UserID)
                 {
                     user = true; break;
                 }
@@ -51,30 +49,30 @@ namespace Budwegkode
         }
         public string GetMedarbejderNavn(string UserID)
         {
-            string[] Lines = sr.ReadToEnd().Split("\n");
+            Medarbejder[] medarbejdere = handler.LoadMedarbejdere();
+
             UserID = UserID.ToUpper();
             string navn = "";
-            for (int i = 0; i < Lines.Length; i++)
+            for (int i = 0; i < medarbejdere.Length; i++)
             {
-                string[] Data = Lines[i].Split(";");
-                if (Data[1] == UserID)
+                if (medarbejdere[i].UserID == UserID)
                 {
-                    navn = Data[0]; break;
+                    navn = medarbejdere[i].Navn; break;
                 }
             }
             return navn;
         }
         public string GetMedarbejderRolle(string UserID)
         {
-            string[] Lines = sr.ReadToEnd().Split("\n");
+            Medarbejder[] medarbejdere = handler.LoadMedarbejdere();
+
             UserID = UserID.ToUpper();
             string rolle = "";
-            for (int i = 0; i < Lines.Length; i++)
+            for (int i = 0; i < medarbejdere.Length; i++)
             {
-                string[] Data = Lines[i].Split(";");
-                if (Data[1] == UserID)
+                if (medarbejdere[i].UserID == UserID)
                 {
-                    rolle = Data[2]; break;
+                    rolle = medarbejdere[i].Rolle; break;
                 }
             }
             return rolle;
