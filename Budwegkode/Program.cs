@@ -8,6 +8,7 @@
             DataHandler afdelingHandler = new DataHandler(@"..\..\..\Afdelingsliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
+            /*
             Medarbejder[] medarbejdere = new Medarbejder[]
             {
                 new Medarbejder("Per Hansen", "9Q13", "leder"),
@@ -28,6 +29,7 @@
 
             medarbejderHandler.SaveMedarbejdere(medarbejdere);
             afdelingHandler.SaveAfdelinger(afdelinger);
+            */
             
             Menu loginMenu = new Menu("Velkommen.");
 
