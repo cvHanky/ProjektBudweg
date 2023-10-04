@@ -63,7 +63,7 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
-                                    Console.WriteLine("Hvilken bygning arbejder du i idag?\n1. Bygning A\n2. Bygning B\n3. Bygning C\n(Tryk 0 for at gå tilbage)");
+                                    Console.WriteLine("Hvilken afdeling arbejder du i idag?\n1. Lager, Bygning 1\n2. Vaskeri, Bygning 1\n3. Varemodtagelse, Bygning 2\n4. Lager, Bygning 2\n5. Pakkeri, Bygning 2\n\n(Tryk 0 for at gå tilbage)");
                                     ConsoleKeyInfo bygning = Console.ReadKey(true);
                                     switch (bygning.Key)
                                     {
@@ -77,6 +77,9 @@
                                             Console.Clear();
                                             break;
                                         case ConsoleKey.D3:
+                                            Console.Clear();
+                                            break;
+                                        case ConsoleKey.D4:
                                             Console.Clear();
                                             break;
                                         default:
@@ -108,7 +111,7 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
-                                    Console.WriteLine("Hvilken afdeling arbejder du i idag?\n1. Bygning A\n2. Bygning B\n3. Bygning C\n\n(Tryk på 0 for at gå tilbage)");
+                                    Console.WriteLine("Hvilken afdeling arbejder du i idag?\n1. Lager, Bygning 1\n2. Vaskeri, Bygning 1\n3. Varemodtagelse, Bygning 2\n4. Lager Bygning 2\n5. Pakkeri, Bygning\n\n(Tryk på 0 for at gå tilbage)");
                                     ConsoleKeyInfo bygning = Console.ReadKey(true);
                                     switch (bygning.Key)
                                     {
@@ -122,6 +125,12 @@
                                             Console.Clear();
                                             break;
                                         case ConsoleKey .D3:
+                                            Console.Clear();
+                                            break;
+                                        case ConsoleKey .D4
+                                            : Console.Clear();
+                                            break;
+                                        case ConsoleKey .D5:
                                             Console.Clear();
                                             break;
                                         default: 
