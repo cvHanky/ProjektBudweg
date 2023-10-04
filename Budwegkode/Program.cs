@@ -8,10 +8,10 @@
             DataHandler afdelingHandler = new DataHandler(@"..\..\..\Afdelingsliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
-            /*
+            
             Medarbejder[] medarbejdere = new Medarbejder[]
             {
-                new Medarbejder("Per Hansen", "9Q13", "leder"),
+                new Medarbejder("Per", "9Q13", "leder"),
                 new Medarbejder("Daniel Hoppe Hansen", "52135"),
                 new Medarbejder("Roberozlav", "007"),
                 new Medarbejder("Mads Carlsen", "1337"),
@@ -29,7 +29,7 @@
 
             medarbejderHandler.SaveMedarbejdere(medarbejdere);
             afdelingHandler.SaveAfdelinger(afdelinger);
-            */
+            
             
             Menu loginMenu = new Menu("Velkommen.");
 
@@ -71,9 +71,12 @@
                                     {
                                         case ConsoleKey.D0:
                                             Console.Clear();
+                                            
                                             break;
                                         case ConsoleKey.D1:
                                             Console.Clear();
+                                            innerMenuRunning = false;
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n",BrugerNavn);
                                             break;
                                         case ConsoleKey.D2:
                                             Console.Clear();
@@ -113,6 +116,7 @@
                                     break;
                                 case ConsoleKey.D1:
                                     Console.Clear();
+                                    innerMenuRunning = false;
                                     Console.WriteLine("Hvilken afdeling arbejder du i idag?\n1. Lager, Bygning 1\n2. Vaskeri, Bygning 1\n3. Varemodtagelse, Bygning 2\n4. Lager Bygning 2\n5. Pakkeri, Bygning\n\n(Tryk på 0 for at gå tilbage)");
                                     ConsoleKeyInfo bygning = Console.ReadKey(true);
                                     switch (bygning.Key)
@@ -122,6 +126,7 @@
                                             break;
                                         case ConsoleKey .D1:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
                                             break;
                                         case ConsoleKey .D2:
                                             Console.Clear();
