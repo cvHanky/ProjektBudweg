@@ -49,5 +49,10 @@ namespace Budwegkode
             Antal = antal;
             Navn = navn;
         }
+
+        public override string ToString()
+        {
+            return "Navn: " + Navn + ", antal: " + Antal;
+        }
     }
 }

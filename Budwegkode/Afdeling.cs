@@ -33,7 +33,10 @@ namespace Budwegkode
             string Titel = Navn + ";" + Bygning + ";";
             return Titel;
         }
-
+        public override string ToString()
+        {
+            return Navn + "," + Bygning;
+        }
 
 
     }
