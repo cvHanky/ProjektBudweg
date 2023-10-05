@@ -72,6 +72,7 @@
                                             break;
                                         case ConsoleKey.D1:
                                             Console.Clear();
+                                            innerMenuRunning = false; 
                                             break;
                                         case ConsoleKey.D2:
                                             Console.Clear();
