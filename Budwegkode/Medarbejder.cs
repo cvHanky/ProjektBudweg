@@ -13,7 +13,7 @@ namespace Budwegkode
         private string navn;                 // Private attributter
         private string userID;
         private string rolle;
-        private string lokation;
+        private string? lokation;
         
         public string Navn                   // Public properties
         {
@@ -30,7 +30,7 @@ namespace Budwegkode
             get { return rolle; } 
             set { rolle = value;  }
         }
-        public string Lokation
+        public string? Lokation
         {
             get { return lokation; }
             set { lokation = value;  }
@@ -41,14 +41,14 @@ namespace Budwegkode
             Navn = navn;
             UserID = userID;
             rolle = "medarbejder";
-            Lokation = "";
+            Lokation = null;
         }
         public Medarbejder(string navn, string userID, string rolle)
         {
             Navn = navn;
             UserID = userID;
             Rolle = rolle;
-            Lokation = "";
+            Lokation = null;
         }
         public string MedarbejderTitel()
         {

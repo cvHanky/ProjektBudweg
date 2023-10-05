@@ -8,7 +8,7 @@
             DataHandler afdelingHandler = new DataHandler(@"..\..\..\Afdelingsliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
-            
+            /*
             Medarbejder[] medarbejdere = new Medarbejder[]
             {
                 new Medarbejder("Per", "9Q13", "leder"),
@@ -29,14 +29,15 @@
 
 
             medarbejderHandler.SaveMedarbejdere(medarbejdere);
-           
-            /*
+            */
+            
             Medarbejder per = new Medarbejder("Per bingbong", "PERPERPER");
             StreamWriter swa = new StreamWriter(@"..\..\..\Medarbejderliste.txt", true);
+            
 
             swa.WriteLine(per.MedarbejderTitel());
             swa.Close();
-            */ // Metode til at tilføje nye medarbejdere til en allerede eksisterende liste.
+             // Metode til at tilføje nye medarbejdere til en allerede eksisterende liste.
 
             
             
