@@ -154,10 +154,11 @@
                                 case ConsoleKey.D4:
                                     Console.Clear();
                                     Console.WriteLine("Hvor kommer gruppen fra?");
-                                    string BesøgendeNavn = Console.ReadLine();
+                                    Console.ReadLine();
                                     Console.WriteLine("Hvor mange er de i gruppen?");
-                                    int BesøgendeAntal = int.Parse(Console.ReadLine());
-                                    Console.WriteLine(BesøgendeNavn + " besøger Budweg med " + BesøgendeAntal + " personer");
+                                    Console.ReadLine();
+
+                                    Console.WriteLine("Fedt man");
                                     break;
                                 case ConsoleKey.D5:
                                     Console.Clear();
