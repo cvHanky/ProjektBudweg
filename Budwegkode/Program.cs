@@ -75,17 +75,38 @@
                                             break;
                                         case ConsoleKey.D1:
                                             Console.Clear();
-                                            innerMenuRunning = false;
                                             Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n",BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey.D2:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey.D3:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey.D4:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
+                                            break;
+                                        case ConsoleKey.D5:
+                                            Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!\n\n", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         default:
                                             Console.Clear();
@@ -127,18 +148,37 @@
                                         case ConsoleKey .D1:
                                             Console.Clear();
                                             Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey .D2:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey .D3:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
-                                        case ConsoleKey .D4
-                                            : Console.Clear();
+                                        case ConsoleKey.D4:
+                                            Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         case ConsoleKey .D5:
                                             Console.Clear();
+                                            Console.WriteLine("Du er nu tjekket ind. God dag {0}!", BrugerNavn);
+                                            Thread.Sleep(2000);
+                                            Console.Clear();
+                                            innerMenuRunning = false;
                                             break;
                                         default: 
                                             Console.Clear();
