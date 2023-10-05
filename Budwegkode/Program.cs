@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            DataHandler medarbejderHandler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
+             DataHandler medarbejderHandler = new DataHandler(@"..\..\..\Medarbejderliste.txt");
             DataHandler afdelingHandler = new DataHandler(@"..\..\..\Afdelingsliste.txt");
             // Nu opstilles en simpel menu som kan bruges i projektet.
 
@@ -27,8 +27,17 @@
                 new Afdeling("Pakkeri","Bygning 2"),
             };
 
+
             medarbejderHandler.SaveMedarbejdere(medarbejdere);
-            afdelingHandler.SaveAfdelinger(afdelinger);
+           
+            /*
+            Medarbejder per = new Medarbejder("Per bingbong", "PERPERPER");
+            StreamWriter swa = new StreamWriter(@"..\..\..\Medarbejderliste.txt", true);
+
+            swa.WriteLine(per.MedarbejderTitel());
+            swa.Close();
+            */ // Metode til at tilføje nye medarbejdere til en allerede eksisterende liste.
+
             
             
             Menu loginMenu = new Menu("Velkommen.");

@@ -23,10 +23,7 @@ namespace Budwegkode
             StreamWriter sw = new StreamWriter(DataFileName);
             for (int i = 0; i < medarbejdere.Length; i++)
             {
-                if (i != medarbejdere.Length - 1)
-                    sw.WriteLine(medarbejdere[i].MedarbejderTitel());
-                else
-                    sw.Write(medarbejdere[i].MedarbejderTitel());
+                sw.WriteLine(medarbejdere[i].MedarbejderTitel());
             }
             sw.Close();
         }
@@ -36,7 +33,7 @@ namespace Budwegkode
             string[] fileLines = sr.ReadToEnd().Split('\n');
             Medarbejder[] medarbejderListe = new Medarbejder[fileLines.Length];
 
-            for (int i = 0; i < fileLines.Length; i++)
+            for (int i = 0; i < fileLines.Length-1; i++)
             {
                 string[] lineData = fileLines[i].Split(";");
                 Medarbejder medarbejder = new Medarbejder(lineData[0], lineData[1], lineData[2]);

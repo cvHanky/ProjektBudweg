@@ -13,6 +13,7 @@ namespace Budwegkode
         private string navn;                 // Private attributter
         private string userID;
         private string rolle;
+        private string lokation;
         
         public string Navn                   // Public properties
         {
@@ -29,23 +30,37 @@ namespace Budwegkode
             get { return rolle; } 
             set { rolle = value;  }
         }
+        public string Lokation
+        {
+            get { return lokation; }
+            set { lokation = value;  }
+        }
 
         public Medarbejder(string navn, string userID)           // Overloading constructors, så man både kan vælge at tilføje 
         {                                                        // en almen medarbejder eller en leder/admin. 
             Navn = navn;
             UserID = userID;
             rolle = "medarbejder";
+            Lokation = "";
         }
         public Medarbejder(string navn, string userID, string rolle)
         {
             Navn = navn;
             UserID = userID;
             Rolle = rolle;
+            Lokation = "";
         }
         public string MedarbejderTitel()
         {
-            string Titel = Navn + ";" + UserID + ";" + Rolle + ";";
+            string Titel = Navn + ";" + UserID + ";" + Rolle + ";" + Lokation + ";";
             return Titel;
         }
+
+        public string IndtjekketMedarbejderTitel()
+        {
+            string Titel = Navn + ";" + Lokation + ";";
+            return Titel;
+        }
+           
     }
 }
